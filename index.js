@@ -56,3 +56,15 @@ container.addEventListener('click', (event) => {
   }
 });
 
+// Add an event listener to the form submit button
+const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const title = document.querySelector('.title').value;
+  const author = document.querySelector('.author').value;
+  addNewBook(title, author);
+  form.reset();
+});
+
+// Display the books when the page loads
+displayBooks();
