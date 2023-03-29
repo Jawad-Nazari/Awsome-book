@@ -8,6 +8,32 @@ body {
   margin: 0 auto;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+}
+
+.navbarItems {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.book-menu {
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+#currentTime {
+  text-align-last: right;
+}
+
 section {
   margin: 0 auto;
   display: flex;

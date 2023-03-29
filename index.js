@@ -1,5 +1,8 @@
 import Book from './list.js';
 
+const date = new Date();
+document.getElementById("currentTime").innerHTML = date.toUTCString();
+
 class BookList {
   constructor() {
     this.storeData = JSON.parse(localStorage.getItem('Added Books')) || [];
@@ -7,6 +10,18 @@ class BookList {
     this.form = document.getElementById('form');
     this.form.addEventListener('submit', this.addNewBook.bind(this));
     this.container.addEventListener('click', this.removeBook.bind(this));
+
+    this.bookLink = document.getElementById('booksLink');
+    this.addBooksLink = document.getElementById('addBooksLink');
+    this.contactLink = document.getElementById('contactLink');
+    this.booksSection = document.getElementById('books');
+    this.addBookSection = document.getElementById('addBook');
+    this.contactSection = document.querySelector('.contact');
+
+    this.bookLink.addEventListener('click', () => this.showBooksSection());
+    this.addBooksLink.addEventListener('click', () => this.showAddBookSection());
+    this.contactLink.addEventListener('click', () => this.showContactSection());
+
     this.displayBooks();
   }
 
@@ -28,6 +43,33 @@ class BookList {
       this.updateData();
       this.displayBooks();
     }
+  }
+
+  showBooksSection() {
+    this.bookLink.classList.add('active');
+    this.addBooksLink.classList.remove('active');
+    this.contactLink.classList.remove('active');
+    this.booksSection.parentElement.nextElementSibling.style.display = 'block';
+    this.addBookSection.style.display = 'none';
+    this.contactSection.style.display = 'none';
+  }
+
+  showAddBookSection() {
+    this.bookLink.classList.remove('active');
+    this.addBooksLink.classList.add('active');
+    this.contactLink.classList.remove('active');
+    this.booksSection.parentElement.nextElementSibling.style.display = 'none';
+    this.addBookSection.style.display = 'block';
+    this.contactSection.style.display = 'none';
+  }
+
+  showContactSection() {
+    this.bookLink.classList.remove('active');
+    this.addBooksLink.classList.remove('active');
+    this.contactLink.classList.add('active');
+    this.booksSection.parentElement.nextElementSibling.style.display = 'none';
+    this.addBookSection.style.display = 'none';
+    this.contactSection.style.display = 'block';
   }
 
   addBookHtml() {
@@ -52,4 +94,4 @@ class BookList {
 }
 
 const bookList = new BookList();
-bookList();
+
