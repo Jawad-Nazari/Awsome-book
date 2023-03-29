@@ -21,6 +21,10 @@ h1 {
   text-align: center;
 }
 
+.newBook-title {
+  align-self: center;
+}
+
 .book-list {
   padding: 0;
   border: 3px solid black;
@@ -49,6 +53,14 @@ input {
   border: 3px solid black;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 button {
   box-shadow: 10px 5px 5px black;
   background-color: white;
@@ -56,9 +68,13 @@ button {
 }
 
 form {
-  margin-top: 20px;
+  margin-top: 10px;
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 70%;
+}
+
+.black-line {
+  margin-top: 30px;
 }
