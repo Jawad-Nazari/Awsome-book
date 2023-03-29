@@ -1,9 +1,4 @@
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
+import Book from './list.js';
 
 class BookList {
   constructor() {
