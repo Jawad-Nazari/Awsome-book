@@ -34,12 +34,12 @@ a {
   text-align-last: right;
 }
 
-section {
-  margin: 0 auto;
+#books {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 h1 {
@@ -101,6 +101,8 @@ form {
   width: 70%;
 }
 
-.black-line {
-  margin-top: 30px;
+footer {
+  border: 3px solid black;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }

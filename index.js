@@ -12,15 +12,16 @@ class BookList {
     this.container.addEventListener('click', this.removeBook.bind(this));
 
     this.bookLink = document.getElementById('booksLink');
-    this.addBooksLink = document.getElementById('addBooksLink');
+    this.addBooksLink = document.getElementById('addNewBook');
     this.contactLink = document.getElementById('contactLink');
     this.booksSection = document.getElementById('books');
-    this.addBookSection = document.getElementById('addBook');
-    this.contactSection = document.querySelector('.contact');
+    this.addBookSection = document.getElementById('addingBook');
+    this.contactSection = document.getElementById('contact');
 
     this.bookLink.addEventListener('click', () => this.showBooksSection());
     this.addBooksLink.addEventListener('click', () => this.showAddBookSection());
     this.contactLink.addEventListener('click', () => this.showContactSection());
+
 
     this.displayBooks();
   }
@@ -49,7 +50,7 @@ class BookList {
     this.bookLink.classList.add('active');
     this.addBooksLink.classList.remove('active');
     this.contactLink.classList.remove('active');
-    this.booksSection.parentElement.nextElementSibling.style.display = 'block';
+    this.booksSection.style.display = 'block';
     this.addBookSection.style.display = 'none';
     this.contactSection.style.display = 'none';
   }
@@ -58,7 +59,7 @@ class BookList {
     this.bookLink.classList.remove('active');
     this.addBooksLink.classList.add('active');
     this.contactLink.classList.remove('active');
-    this.booksSection.parentElement.nextElementSibling.style.display = 'none';
+    this.booksSection.style.display = 'none';
     this.addBookSection.style.display = 'block';
     this.contactSection.style.display = 'none';
   }
@@ -67,7 +68,7 @@ class BookList {
     this.bookLink.classList.remove('active');
     this.addBooksLink.classList.remove('active');
     this.contactLink.classList.add('active');
-    this.booksSection.parentElement.nextElementSibling.style.display = 'none';
+    this.booksSection.style.display = 'none';
     this.addBookSection.style.display = 'none';
     this.contactSection.style.display = 'block';
   }
@@ -94,4 +95,3 @@ class BookList {
 }
 
 const bookList = new BookList();
-
