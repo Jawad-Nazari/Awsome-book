@@ -33,7 +33,7 @@ class BookList {
   addBookHtml() {
     return this.storeData.map((book, index) => `
       <div class="book-list-book">
-        <p>"${book.title}"by ${book.author}</p>
+        <p>" ${book.title}"  by  ${book.author} </p>
         <button class="remove" data-index="${index}" type="button">Remove</button>
       </div>
     `).join('');
@@ -52,3 +52,4 @@ class BookList {
 }
 
 const bookList = new BookList();
+bookList();
