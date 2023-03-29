@@ -8,7 +8,7 @@ class Book {
 class BookList {
   constructor() {
     this.storeData = JSON.parse(localStorage.getItem('Added Books')) || [];
-    this.container = document.querySelector('.container');
+    this.container = document.querySelector('.book-list');
     this.form = document.getElementById('form');
     this.form.addEventListener('submit', this.addNewBook.bind(this));
     this.container.addEventListener('click', this.removeBook.bind(this));
@@ -28,26 +28,25 @@ class BookList {
 
   removeBook(event) {
     if (event.target.classList.contains('remove')) {
-      const index = event.target.dataset.index;
+      const { index } = event.target.dataset;
       this.storeData.splice(index, 1);
       this.updateData();
       this.displayBooks();
     }
   }
 
-  addBooks() {
+  addBookHtml() {
     return this.storeData.map((book, index) => `
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button class="remove" data-index="${index}" type="button">Remove</button>
-      <hr>
+      <div class="book-list-book">
+        <p>"${book.title}"by ${book.author}</p>
+        <button class="remove" data-index="${index}" type="button">Remove</button>
+      </div>
     `).join('');
   }
 
   displayBooks() {
     const div = document.createElement('div');
-    div.classList.add('book-list');
-    div.innerHTML = this.addBooks();
+    div.innerHTML = this.addBookHtml();
     this.container.innerHTML = '';
     this.container.appendChild(div);
   }
