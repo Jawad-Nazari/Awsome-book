@@ -1,7 +1,7 @@
 import Book from './list.js';
 
 const date = new Date();
-document.getElementById("currentTime").innerHTML = date.toUTCString();
+document.getElementById('currentTime').innerHTML = date.toUTCString();
 
 class BookList {
   constructor() {
@@ -21,7 +21,6 @@ class BookList {
     this.bookLink.addEventListener('click', () => this.showBooksSection());
     this.addBooksLink.addEventListener('click', () => this.showAddBookSection());
     this.contactLink.addEventListener('click', () => this.showContactSection());
-
 
     this.displayBooks();
   }
@@ -50,7 +49,7 @@ class BookList {
     this.bookLink.classList.add('active');
     this.addBooksLink.classList.remove('active');
     this.contactLink.classList.remove('active');
-    this.booksSection.style.display = 'block';
+    this.booksSection.style.display = 'flex';
     this.addBookSection.style.display = 'none';
     this.contactSection.style.display = 'none';
   }
@@ -70,7 +69,7 @@ class BookList {
     this.contactLink.classList.add('active');
     this.booksSection.style.display = 'none';
     this.addBookSection.style.display = 'none';
-    this.contactSection.style.display = 'block';
+    this.contactSection.style.display = 'flex';
   }
 
   addBookHtml() {

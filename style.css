@@ -18,7 +18,6 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-
 }
 
 a {
@@ -49,6 +48,7 @@ h1 {
 
 .newBook-title {
   align-self: center;
+  margin-bottom: 30px;
 }
 
 .book-list {
@@ -98,11 +98,21 @@ form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 70%;
 }
 
 footer {
   border: 3px solid black;
   margin-top: 50px;
   margin-bottom: 10px;
+}
+
+.contact {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
 }
