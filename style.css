@@ -1,4 +1,80 @@
+* {
+  margin: 0;
+  padding: 5px;
+  font-family: 'Comic Neue', cursive;
+}
+
+body {
+  margin: 0 auto;
+}
+
+section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
-  display: block;
-  font-size: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.newBook-title {
+  align-self: center;
+}
+
+.book-list {
+  padding: 0;
+  border: 3px solid black;
+  width: 100%;
+}
+
+.book-list-book {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(200, 200, 200);
+}
+
+.book-list-book:nth-child(even) {
+  background-color: white;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid black;
+  margin: 10px 0;
+  width: 20%;
+}
+
+input {
+  width: 100%;
+  border: 3px solid black;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  box-shadow: 10px 5px 5px black;
+  background-color: white;
+  align-self: flex-end;
+}
+
+form {
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.black-line {
+  margin-top: 30px;
 }

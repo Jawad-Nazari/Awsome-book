@@ -10,19 +10,28 @@
 </head>
 
 <body>
-  <h1>Awesome Book</h1>
-  <div class="container">
-    <!-- Awsome Books are added here -->
-  </div>
+  <section>
+    <h2>All awesome Books</h2>
+    <div class="book-list">
+      <!-- Awesome Books are added here -->
+    </div>
 
-  <form id="form">
-    <input class="title" type="text" placeholder="Title" required>
-    <br><br>
-    <input class="author" type="text" placeholder="Author" required>
-    <br><br>
-    <button class="btn-add" type="submit">Add</button>
-  </form>
-  <script src="index.js"></script>
+    <hr class="black-line">
+
+    <form id="form">
+
+      <div class="inputs">
+        <h2 class="newBook-title">Add a new book</h2>
+        <input class="title" type="text" placeholder="Title" required>
+        <input class="author" type="text" placeholder="Author" required>
+        <button class="btn-add" type="submit">Add</button>
+      </div>
+
+
+    </form>
+  </section>
+
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>
