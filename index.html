@@ -6,30 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
   <title>Awsome Books</title>
 </head>
 
 <body>
-  <section>
+  <nav>
+    <div class="navbar">
+      <p>Awesome Book</p>
+      <ul class="navbarItems">
+        <li><a href="#" id="booksLink"> List</a></li>
+        <li class="book-menu"><a href="#" id="addNewBook">Add New Book</a></li>
+        <li><a href="#" id="contactLink">Contact</a></li>
+      </ul>
+    </div>
+    <p id="currentTime"></p>
+  </nav>
+  <div id="books" data-section="books">
     <h2>All awesome Books</h2>
     <div class="book-list">
       <!-- Awesome Books are added here -->
     </div>
 
-    <hr class="black-line">
+  </div>
 
+  <div id="addingBook" data-section="addingBook">
     <form id="form">
-
       <div class="inputs">
         <h2 class="newBook-title">Add a new book</h2>
         <input class="title" type="text" placeholder="Title" required>
         <input class="author" type="text" placeholder="Author" required>
         <button class="btn-add" type="submit">Add</button>
       </div>
-
-
     </form>
-  </section>
+  </div>
+
+  <div class="contact">
+    <div id="contact" data-section="contact">
+      <h2>Contact Information</h2>
+      <p>Do have any question or you want just to say "HELLO"?</p>
+      <p>You can reach out to us!</p>
+      <ul>
+        <li>Our E-mail: mail@mail.com</li>
+        <li>Our Phone number: +936777377325</li>
+        <li>Our Address: Steatname, 22, 85332 City, Country</li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <footer>
+    <p>Copyright</p>
+  </footer>
 
   <script src="index.js" type="module"></script>
 </body>
