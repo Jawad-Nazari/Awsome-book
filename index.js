@@ -49,9 +49,11 @@ class BookList {
     this.bookLink.classList.add('active');
     this.addBooksLink.classList.remove('active');
     this.contactLink.classList.remove('active');
-    this.booksSection.style.display = 'flex';
+    this.booksSection.style.display = 'block';
     this.addBookSection.style.display = 'none';
     this.contactSection.style.display = 'none';
+    this.booksSection.style.display = 'flex';
+    this.booksSection.style.justifyContent = 'center';
   }
 
   showAddBookSection() {
@@ -61,6 +63,8 @@ class BookList {
     this.booksSection.style.display = 'none';
     this.addBookSection.style.display = 'block';
     this.contactSection.style.display = 'none';
+    this.addBookSection.style.display = 'flex';
+    this.addBookSection.style.justifyContent = 'center';
   }
 
   showContactSection() {
@@ -69,7 +73,7 @@ class BookList {
     this.contactLink.classList.add('active');
     this.booksSection.style.display = 'none';
     this.addBookSection.style.display = 'none';
-    this.contactSection.style.display = 'flex';
+    this.contactSection.style.display = 'block';
   }
 
   addBookHtml() {
@@ -94,3 +98,4 @@ class BookList {
 }
 
 const bookList = new BookList();
+bookList();
